@@ -18,11 +18,19 @@ function App() {
         />
       </div>
       <div>
-        <VictoryChart domainPadding={20}>
-          {/* <VictoryAxis tickValues={20, 40, 60, 80}/>
-          <VictoryBar data={friendlyNumber(data)} /*x="name" y="age"*/ /> */}
-          <VictoryPie data={friendlyNumber(data)}/>
-        </VictoryChart>
+        {/* <VictoryChart domainPadding={20}> */}
+        {/* <VictoryAxis tickValues={20, 40, 60, 80}/> */}
+        {/* <VictoryBar data={friendlyNumber(data)} /> */}
+        {/* <VictoryPie data={friendlyNumber(data)} /> */}
+        {/* </VictoryChart> */}
+        <VictoryPie
+          data={[
+            { x: 'Friendly', y: 162 },
+            { x: 'Not Friendly', y: 138 }
+          ]}
+          colorScale={['cyan', 'orange']}
+          height={300}
+        />
       </div>
     </div>
   );
