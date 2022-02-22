@@ -13,14 +13,25 @@ export function generateFields(arr) {
 }
 
 export function friendlyNumber(arr) {
+  console.log(arr[0]);
   let friendly = 0;
   let notFriendly = 0;
     
-  for (let i = 0; i < arr.length; i++) {
-    if (arr.friendly === true) {
-      friendly++;
-    } else if (notFriendly++) {
-      notFriendly++;
-    }
-  }
+  arr.map(() => {
+    (arr['friendly?'] === true)
+      ? friendly++
+      : notFriendly++;
+  });
+  console.log(friendly, notFriendly);
+  return [friendly, notFriendly];
 }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr['friendly?'] === true) {
+//       friendly++;
+//     } else {
+//       notFriendly++;
+//     }
+//   }
+//   console.log(friendly, notFriendly);
+//   return [friendly, notFriendly];
+// }
