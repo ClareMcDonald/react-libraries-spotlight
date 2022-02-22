@@ -13,7 +13,6 @@ export function generateFields(arr) {
 }
 
 export function friendlyNumber(arr) {
-  console.log(arr[0]);
   let friendly = 0;
   let notFriendly = 0;
       
@@ -22,7 +21,7 @@ export function friendlyNumber(arr) {
       ? friendly++
       : notFriendly++;
   });
-  console.log(friendly, notFriendly);
+  
   return [friendly, notFriendly];
 }
 

@@ -19,8 +19,15 @@ function App() {
       </div>
       <div>
         <VictoryChart domainPadding={10}>
-          {/* <VictoryAxis tickValues={20, 40, 60, 80}/> */}
-          <VictoryBar data={friendlyNumber(data)} />
+          <VictoryAxis tickValues={50, 100, 150}/>
+          <VictoryBar data={[
+            { x: 'Friendly', y: yesFriendlyNumber(data) },
+            { x: 'Not Friendly', y: notFriendlyNumber(data) }
+          ]}
+          style={{
+            data: { fill:  }
+            }}
+          />
         </VictoryChart>
 
         <VictoryPie
