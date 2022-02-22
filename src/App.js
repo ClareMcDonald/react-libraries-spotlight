@@ -4,7 +4,7 @@ import data from './data';
 import { generateFields, friendlyNumber } from './data-utils';
 import reactDOM from 'react-dom';
 import * as V from 'victory';
-import { VictoryBar, VictoryChart, VictoryAxis } from 'victory';
+import { VictoryBar, VictoryChart, VictoryAxis, VictoryPie } from 'victory';
 import './App.css';
 
 function App() {
@@ -19,8 +19,9 @@ function App() {
       </div>
       <div>
         <VictoryChart domainPadding={20}>
-          <VictoryAxis tickValues={20, 40, 60, 80}/>
-          <VictoryBar data={friendlyNumber(data)} /*x="name" y="age"*/ />
+          {/* <VictoryAxis tickValues={20, 40, 60, 80}/>
+          <VictoryBar data={friendlyNumber(data)} /*x="name" y="age"*/ /> */}
+          <VictoryPie data={friendlyNumber(data)}/>
         </VictoryChart>
       </div>
     </div>
