@@ -4,7 +4,7 @@ import data from './data';
 import { generateFields } from './data-utils';
 import reactDOM from 'react-dom';
 import * as V from 'victory';
-import { VictoryBar } from 'victory';
+import { VictoryBar, VictoryChart, VictoryAxis } from 'victory';
 import './App.css';
 
 function App() {
@@ -18,7 +18,10 @@ function App() {
         />
       </div>
       <div>
-        <VictoryBar />
+        <VictoryChart domainPadding={20}>
+          <VictoryAxis tickValues={20, 40, 60, 80}/>
+          <VictoryBar data={data} x="name" y="age" />
+        </VictoryChart>
       </div>
     </div>
   );

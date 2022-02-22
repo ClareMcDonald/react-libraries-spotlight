@@ -11,3 +11,16 @@ export function generateFields(arr) {
   });
   return fields;
 }
+
+export function friendlyNumber(arr) {
+  let friendly = 0;
+  let notFriendly = 0;
+    
+  for (let i = 0; i < arr.length; i++) {
+    if (arr.friendly === true) {
+      friendly++;
+    } else if (notFriendly++) {
+      notFriendly++;
+    }
+  }
+}
