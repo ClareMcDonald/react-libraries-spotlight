@@ -1,7 +1,7 @@
 import React from 'react';
 import MaterialTable from 'material-table';
 import data from './data';
-import { generateFields, friendlyNumber } from './data-utils';
+import { generateFields, friendlyNumber, yesFriendlyNumber, notFriendlyNumber } from './data-utils';
 import reactDOM from 'react-dom';
 import * as V from 'victory';
 import { VictoryBar, VictoryChart, VictoryAxis, VictoryPie } from 'victory';
@@ -18,15 +18,15 @@ function App() {
         />
       </div>
       <div>
-        {/* <VictoryChart domainPadding={20}> */}
-        {/* <VictoryAxis tickValues={20, 40, 60, 80}/> */}
-        {/* <VictoryBar data={friendlyNumber(data)} /> */}
-        {/* <VictoryPie data={friendlyNumber(data)} /> */}
-        {/* </VictoryChart> */}
+        <VictoryChart domainPadding={10}>
+          {/* <VictoryAxis tickValues={20, 40, 60, 80}/> */}
+          <VictoryBar data={friendlyNumber(data)} />
+        </VictoryChart>
+
         <VictoryPie
           data={[
-            { x: 'Friendly', y: 162 },
-            { x: 'Not Friendly', y: 138 }
+            { x: 'Friendly', y: yesFriendlyNumber(data) },
+            { x: 'Not Friendly', y: notFriendlyNumber(data) }
           ]}
           colorScale={['cyan', 'orange']}
           height={300}

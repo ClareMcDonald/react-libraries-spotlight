@@ -25,3 +25,28 @@ export function friendlyNumber(arr) {
   console.log(friendly, notFriendly);
   return [friendly, notFriendly];
 }
+
+export function yesFriendlyNumber(arr) {
+  let friendly = 0;
+      
+  arr.map(person => {
+    if (person.friendly === true) {
+      friendly++;
+    }
+
+  });
+
+  return friendly;
+}
+
+export function notFriendlyNumber(arr) {
+  let notFriendly = 0;
+      
+  arr.map(person => {
+    if (person.friendly === false) {
+      notFriendly++;
+    }
+  });
+
+  return notFriendly;
+}
