@@ -2,8 +2,8 @@ import React from 'react';
 import MaterialTable from 'material-table';
 import data from './data';
 import { generateFields, yesFriendlyNumber, notFriendlyNumber, getTotalOfEachGender, getCustomersByCarModelYear } from './data-utils';
-import reactDOM from 'react-dom';
-import * as V from 'victory';
+// import reactDOM from 'react-dom';
+// import * as V from 'victory';
 import { VictoryBar, VictoryChart, VictoryAxis, VictoryPie, VictoryLine, VictoryTheme } from 'victory';
 import './App.css';
 
