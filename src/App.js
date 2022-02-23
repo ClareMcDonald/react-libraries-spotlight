@@ -19,8 +19,14 @@ function App() {
       </div>
       <div>
         <VictoryChart domainPadding={10}>
-          {/* <VictoryAxis tickValues={50, 100, 150}/> */}
-          <VictoryBar data={getTotalOfEachGender(data)} x='gender' y='total' />
+          <VictoryAxis
+            style={
+              { tickLabels: { fontSize: 10, angle: 45, fill: 'blue', fontWeight: 'bold', verticalAnchor: 'bottom' } }
+            }
+          />
+          <VictoryAxis dependentAxis />
+          <VictoryBar data={getTotalOfEachGender(data)} x='gender' y='total'
+            style={{ data: { fill: 'purple' }, axisLabel: { fontSize: 16 } } } />
         </VictoryChart>
 
         <VictoryPie
