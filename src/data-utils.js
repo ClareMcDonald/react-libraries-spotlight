@@ -49,3 +49,15 @@ export function notFriendlyNumber(arr) {
 
   return notFriendly;
 }
+
+export function getTotalOfEachGender(customers) {
+  const hashMap = customers.reduce((acc, customer) => {
+    if (acc[customer.gender]) {
+      acc[customer.gender]++;
+    } else {
+      acc[customer.gender] = 1;
+    }
+    return acc;
+  }, {});
+  return hashMap;
+}
