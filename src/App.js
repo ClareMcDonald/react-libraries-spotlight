@@ -38,9 +38,13 @@ function App() {
           height={300}
         />
 
-        <VictoryChart
-          theme={VictoryTheme.material}
-        >
+        <VictoryChart theme={VictoryTheme.material}>
+          <VictoryAxis
+            style={
+              { tickLabels: { fontSize: 8, angle: 90, fill: 'black', verticalAnchor: 'bottom' } }
+            }
+          />
+          <VictoryAxis dependentAxis />
           <VictoryLine
             style={{
               data: { stroke: '#c43a31' },

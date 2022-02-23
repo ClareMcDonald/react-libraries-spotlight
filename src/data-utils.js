@@ -84,6 +84,6 @@ export function getCustomersByCarModelYear(customers) {
   const newArray = array.map(item => (
     { year: item[0], customers: item[1] }
   ));
-  console.log(newArray);
+
   return newArray;
 }
