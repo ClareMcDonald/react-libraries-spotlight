@@ -59,11 +59,31 @@ export function getTotalOfEachGender(customers) {
     }
     return acc;
   }, {});
-  console.log(Object.entries(hashMap));
+
   const array = Object.entries(hashMap);
+
   const newArray = array.map(item => (
     { gender: item[0], total: item[1] }
   ));
-  console.log('new array', newArray);
+
+  return newArray;
+}
+
+export function getCustomersByCarModelYear(customers) {
+  const hashMap = customers.reduce((acc, customer) => {
+    if (acc[customer.car_year]) {
+      acc[customer.car_year]++;
+    } else {
+      acc[customer.car_year] = 1;
+    }
+    return acc;
+  }, {});
+  
+  const array = Object.entries(hashMap);
+
+  const newArray = array.map(item => (
+    { year: item[0], customers: item[1] }
+  ));
+  console.log(newArray);
   return newArray;
 }
