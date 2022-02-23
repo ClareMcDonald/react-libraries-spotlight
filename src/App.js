@@ -22,7 +22,7 @@ function App() {
           {/* <VictoryAxis tickValues={50, 100, 150}/> */}
           <VictoryBar data={getTotalOfEachGender(data)} x='gender' y='total' />
         </VictoryChart>
-        
+
         <VictoryPie
           data={[
             { x: 'Friendly', y: yesFriendlyNumber(data) },

@@ -1,5 +1,3 @@
-import { TransitEnterexitSharp } from "@material-ui/icons";
-
 export function generateFields(arr) {
   const keys = Object.keys(arr[0]);
 
@@ -63,10 +61,9 @@ export function getTotalOfEachGender(customers) {
   }, {});
   console.log(Object.entries(hashMap));
   const array = Object.entries(hashMap);
-  const dataAsObjects = array.reduce(item => {
-    return {
-      gender: item.gender,
-      total: item.total
-    };
-  });
+  const newArray = array.map(item => (
+    { gender: item[0], total: item[1] }
+  ));
+  console.log('new array', newArray);
+  return newArray;
 }
